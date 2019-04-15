@@ -1,0 +1,18 @@
+<app-header [view]="'console'" xmlns=""></app-header>
+<br>
+<br>
+<pre class="console console-text" *ngFor="let command of commands">
+  {{command.value}}
+</pre>
+<form class="flex-container" (ngSubmit)="submitCommand($event)" action="/">
+  <div class="console console-tag">
+    {{dir}}
+  </div>
+  <div class="arrow"></div>
+  <input type="text" class="console console-input" id='command' name="command" [(ngModel)]="command"
+         autofocus="autofocus" autocomplete="off" autocapitalize="off" spellcheck="false" required>
+</form>
+<br>
+<br>
+<br id="commandline">
+<app-footer></app-footer>

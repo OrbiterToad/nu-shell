@@ -1,0 +1,20 @@
+.console-footer {
+  position: fixed;
+  margin: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #3a0054 !important;
+}
+
+.console {
+  font-family: Consolas, serif;
+  color: white;
+  font-size: 18px;
+  background-color: #000026;
+}
+
+.console::selection {
+  color: #000026;
+  background-color: whitesmoke;
+}

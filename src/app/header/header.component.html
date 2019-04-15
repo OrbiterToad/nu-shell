@@ -1,0 +1,12 @@
+<div class="console console-header" xmlns="">
+  <a class="button" routerLink="/" [ngClass]="{'button-selected' : view == 'console'}">Console</a>
+  <a class="button" routerLink="/settings" [ngClass]="{'button-selected' : view == 'settings'}">Settings</a>
+  <a class="button" routerLink="/explorer" [ngClass]="{'button-selected' : view == 'explorer'}">Explorer</a>
+  <div class="float-right">
+    <a class="button" id="exit">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+</div>
+
+<script src="header.controller.js"></script>

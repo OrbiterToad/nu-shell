@@ -1,0 +1,34 @@
+.console-header {
+  position: fixed;
+  margin: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #3a0054 !important;
+}
+
+.console {
+  font-family: Consolas, serif;
+  color: white;
+  font-size: 18px;
+  background-color: #000026;
+}
+
+.console::selection {
+  color: #000026;
+  background-color: whitesmoke;
+}
+
+.button {
+  border: none;
+  padding: 3px 5px;
+  margin: 0;
+  background-color: #3a0090;
+  color: lightgray;
+  outline: none;
+}
+
+.button-selected {
+  background-color: #4240a4;
+  color: white;
+}

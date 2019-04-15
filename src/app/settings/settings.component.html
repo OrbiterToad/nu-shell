@@ -1,0 +1,26 @@
+<app-header [view]="'settings'"></app-header>
+<br>
+<br>
+
+
+<form (ngSubmit)="saveSettings($event)" method="post">
+  <div class="flex-container">
+    <div class="console console-tag">
+      Font
+    </div>
+    <div class="arrow"></div>
+    <input type="text" class="console console-input" name="font" [(ngModel)]="settings.font">
+  </div>
+
+  <div class="flex-container">
+    <div class="console console-tag">
+      Font Size
+    </div>
+    <div class="arrow"></div>
+    <input type="text" class="console console-input" name="fontSize" [(ngModel)]="settings.fontSize">
+  </div>
+</form>
+{{settings | json}}
+
+
+<app-footer></app-footer>
