@@ -1,10 +1,11 @@
 <app-header [view]="'console'" xmlns=""></app-header>
 <br>
 <br>
-<pre class="console console-text" *ngFor="let command of commands">
-  {{command.value}}
-</pre>
-<form class="flex-container" (ngSubmit)="submitCommand($event)" action="/">
+<div class="console console-text" *ngFor="let command of commands">
+  <div style="margin-left: 1em; margin-right: 1em">{{command.value}}</div>
+</div>
+
+<form class="flex-container" (ngSubmit)="submitCommand($event)" action="/" style="margin-top: 1rem;">
   <div class="console console-tag">
     {{dir}}
   </div>
@@ -12,7 +13,9 @@
   <input type="text" class="console console-input" id='command' name="command" [(ngModel)]="command"
          autofocus="autofocus" autocomplete="off" autocapitalize="off" spellcheck="false" required>
 </form>
+
 <br>
 <br>
 <br id="commandline">
+
 <app-footer></app-footer>

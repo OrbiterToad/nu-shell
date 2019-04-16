@@ -10,6 +10,7 @@ import {SettingsComponent} from './settings/settings.component';
 import {CookieService} from 'ngx-cookie-service';
 import {ExplorerComponent} from './explorer/explorer.component';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 const appRoutes: Routes = [
@@ -35,7 +36,10 @@ const appRoutes: Routes = [
     ),
     FormsModule
   ],
-  providers: [CookieService],
+  providers: [
+    CookieService,
+    HttpClientModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

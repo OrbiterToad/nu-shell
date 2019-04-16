@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -9,9 +9,16 @@ export class FooterComponent implements OnInit {
 
   date: Date = new Date();
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
   }
 
+  ngOnInit() {
+    let self = this;
+    const updateTime = function () {
+      self.date = new Date();
+      setTimeout(updateTime, 1000);
+    };
+
+    updateTime();
+  }
 }

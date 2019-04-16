@@ -8,17 +8,21 @@ import {Component, OnInit} from '@angular/core';
 export class ConsoleComponent implements OnInit {
 
   commands: ConsoleCommand[] = [
-    {type: 'a', value: 'Date: 2019-04-15T12:42:48.489Z - Hash: 95912982d6c7b0035bf0 - Time: 243ms'},
-    {type: 'a', value: '4 unchanged chunks'},
-    {type: 'a', value: 'chunk {main} main.js, main.js.map (main) 17.7 kB [initial] [rendered]'},
-    {type: 'a', value: 'i ｢wdm｣: Compiled successfully.'}
+    {type: 'info', value: '> nu-shell@0.0.0 start D:\\Projects\\learning\\nu-shell'},
+    {type: 'info', value: '> ng serve'},
+    {type: 'info', value: 'Date: 2019-04-15T12:42:48.489Z - Hash: 95912982d6c7b0035bf0 - Time: 243ms'},
+    {type: 'info', value: '4 unchanged chunks'},
+    {type: 'success', value: 'chunk {main} main.js, main.js.map (main) 17.7 kB [initial] [rendered]'},
+    {type: 'error', value: 'i ｢wdm｣: Compiled successfully.'}
   ];
+
   dir: string;
   command: string;
 
   constructor() {
     this.dir = '/home/nu-shell $';
     this.command = 'test';
+
   }
 
   ngOnInit() {
@@ -27,9 +31,11 @@ export class ConsoleComponent implements OnInit {
 
   submitCommand($event) {
     $event.preventDefault();
-    this.commands.push({type: 'a', value: this.command});
-    document.getElementById('commandline').scrollIntoView(true);
-    //Todo: child_event run commands
+    if (this.command != '') {
+      this.commands.push({type: 'info', value: this.command});
+      document.getElementById('commandline').scrollIntoView(true);
+      this.command = '';
+    }
   }
 }
 

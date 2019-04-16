@@ -6,9 +6,8 @@ function createWindow() {
   win = new BrowserWindow({
     width: 900,
     height: 800,
-    backgroundColor: '#ffffff',
     icon: `file://${__dirname}/dist/nu-shell/logo.png`,
-    frame: false
+    frame: true
   });
 
 

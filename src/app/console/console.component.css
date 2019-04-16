@@ -2,18 +2,8 @@
   margin: 0;
   width: 100%;
   white-space: normal;
-}
-
-.console {
-  font-family: Consolas, serif;
-  color: white;
-  font-size: 18px;
-  background-color: #000026;
-}
-
-.console::selection {
-  color: #000026;
-  background-color: whitesmoke;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .arrow {
@@ -23,21 +13,20 @@
   display: -moz-inline-box;
   display: inline-block;
   /* Use font-size to control the size of the arrow. */
-  font-size: 130px;
+  /*font-size: 133px;*/
+  /*18=133*/
+  /*19=141*/
   height: 0;
   line-height: 0;
   position: relative;
   vertical-align: middle;
   width: 0;
-  background-color: #000035; /* change background color acc to bg color */
   border-left-width: 0.1em;
   border-left-style: solid;
-  border-left-color: #000059;
 }
 
 .console-tag {
-  background-color: #000059 !important;
-  color: whitesmoke !important;
+  padding-left: 1em;
   width: auto;
 }
 
@@ -47,9 +36,27 @@
   outline: none;
   width: 100%;
   flex: 1;
-  background-color: #000035 !important;
 }
 
 .flex-container {
   display: flex;
+}
+
+.line {
+  border-bottom: 2px solid;
+}
+
+.line-info {
+  color: blue;
+  border-bottom-color: blue;
+}
+
+.line-error {
+  color: red;
+  border-bottom-color: red;
+}
+
+.line-success {
+  color: green;
+  border-bottom-color: forestgreen;
 }

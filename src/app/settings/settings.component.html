@@ -3,7 +3,8 @@
 <br>
 
 
-<form (ngSubmit)="saveSettings($event)" method="post">
+<form (ngSubmit)="saveSettings($event)" method="post" action="/settings">
+  <h3 style="margin-left: 1rem">Settings</h3>
   <div class="flex-container">
     <div class="console console-tag">
       Font
@@ -11,7 +12,6 @@
     <div class="arrow"></div>
     <input type="text" class="console console-input" name="font" [(ngModel)]="settings.font">
   </div>
-
   <div class="flex-container">
     <div class="console console-tag">
       Font Size
@@ -19,8 +19,68 @@
     <div class="arrow"></div>
     <input type="text" class="console console-input" name="fontSize" [(ngModel)]="settings.fontSize">
   </div>
+  <br>
+  <h3 style="margin-left: 1rem">Theme</h3>
+  <div class="flex-container">
+    <div class="console console-tag">
+      Font Color
+    </div>
+    <div class="arrow"></div>
+    <input type="text" class="console console-input" name="colorFont" [(ngModel)]="settings.theme.colorFont">
+  </div>
+  <div class="flex-container">
+    <div class="console console-tag">
+      Console Font
+    </div>
+    <div class="arrow"></div>
+    <input type="text" class="console console-input" name="colorConsoleFont"
+           [(ngModel)]="settings.theme.colorConsoleFont">
+  </div>
+  <div class="flex-container">
+    <div class="console console-tag">
+      Background
+    </div>
+    <div class="arrow"></div>
+    <input type="text" class="console console-input" name="colorBackground"
+           [(ngModel)]="settings.theme.colorBackground">
+  </div>
+  <div class="flex-container">
+    <div class="console console-tag">
+      Input
+    </div>
+    <div class="arrow"></div>
+    <input type="text" class="console console-input" name="colorInput" [(ngModel)]="settings.theme.colorInput">
+  </div>
+  <div class="flex-container">
+    <div class="console console-tag">
+      Tags
+    </div>
+    <div class="arrow"></div>
+    <input type="text" class="console console-input" name="colorTags" [(ngModel)]="settings.theme.colorTags">
+  </div>
+  <div class="flex-container">
+    <div class="console console-tag">
+      Button
+    </div>
+    <div class="arrow"></div>
+    <input type="text" class="console console-input" name="colorButton" [(ngModel)]="settings.theme.colorButton">
+  </div>
+  <div class="flex-container">
+    <div class="console console-tag">
+      Selected Button
+    </div>
+    <div class="arrow"></div>
+    <input type="text" class="console console-input" name="colorButtonActive"
+           [(ngModel)]="settings.theme.colorButtonActive">
+  </div>
+  <div class="flex-container">
+    <div class="console console-tag">
+      Taskbar
+    </div>
+    <div class="arrow"></div>
+    <input type="text" class="console console-input" name="colorBackgroundTaskbar"
+           [(ngModel)]="settings.theme.colorBackgroundTaskbar">
+  </div>
+  <button class="button" type="submit" style="visibility: hidden;">Save</button>
 </form>
-{{settings | json}}
-
-
 <app-footer></app-footer>
